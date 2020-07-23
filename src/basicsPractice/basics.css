@@ -1,0 +1,26 @@
+.Basics {
+    color: #1491F4;
+    background: #3A3A3A;
+}
+
+.UserInput {
+    width: 60%;
+    margin: auto;
+    color: #1491F4;
+    background: #2A2A2A;
+    border: 1px solid #1491F4;
+    box-shadow: 0 2px 3px #0586f0;
+    padding: 16px;
+    text-align: center;
+}
+
+.UserOutput {
+    width: 60%;
+    margin: auto;
+    color: #1491F4;
+    background: #2A2A2A;
+    border: 1px solid #1491F4;
+    box-shadow: 0 2px 3px #0586f0;
+    padding: 16px;
+    text-align: center;
+}
