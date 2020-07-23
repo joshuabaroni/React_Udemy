@@ -3,7 +3,7 @@ import Person from './Person/Person'
 // import logo from './logo.svg';
 import styled from 'styled-components'
 import Radium, { StyleRoot } from 'radium'
-import './App.css';
+import classes from './App.css';
 
 class App extends Component {
   state = {
@@ -99,6 +99,7 @@ class App extends Component {
     `
 
     let persons = null;
+    let btnClass = [classes.button]
 
     if (this.state.showPersons) {
       style.backgroundColor = 'red'
@@ -122,22 +123,26 @@ class App extends Component {
           }) : console.log(this.state.persons) }
         </div>
       );
+
+      btnClass.push(classes.Red)
     }
 
-    const classes = []
+    const assignedClasses = []
     if (this.state.persons.length <= 2) {
-      classes.push('red');
+      assignedClasses.push(classes.red);
       if (this.state.persons.length <= 1) {
-        classes.push('bold'); // "red bold"
+        assignedClasses.push(classes.bold); // "red bold"
       }
     }
 
     return ( // 'this' returns the component object
       <StyleRoot>
         <div className="App">
+          {console.log(btnClass)}
           <h1>Hi, I'm a react app</h1>
-          <p className={classes.join(' ')}>This is really working!</p>
-          <button className="button"
+          <p className={assignedClasses.join(' ')}>This is really working!</p>
+          <button
+            className={btnClass}
             onClick={this.togglePersonsHandler}
           >
             Toggle Persons Basic Button
